@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Popup = () => {
-  const [crypto, setCrypto] = useState("");
+  const [crypto, setCrypto] = useState("Busca una cripto");
 
   useEffect(() => {
     chrome.runtime.sendMessage({ type: "GET_CRYPTO" }, (response) => {
@@ -17,7 +17,6 @@ const Popup = () => {
         <h2 className="text-lg font-bold">Crypto Insight</h2>
         <input
           type="text"
-          placeholder="Buscar criptomoneda..."
           value={crypto}
           readOnly
           className="w-full p-2 border rounded mt-2 bg-gray-200"
