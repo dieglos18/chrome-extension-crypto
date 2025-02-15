@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && move out/popup/index.html out/popup.html && robocopy ./public ./out /E",
+    "build": "next build && move out/_next out/next && move out/popup/index.html out/popup.html && robocopy ./public ./out /E",
     "start": "next start",
     "lint": "next lint"
   },
